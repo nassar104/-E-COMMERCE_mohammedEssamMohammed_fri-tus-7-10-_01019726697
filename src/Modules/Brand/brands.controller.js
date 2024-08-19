@@ -121,7 +121,8 @@ export const deleteBrand = async (req, res, next) => {
   
 
 /**
- * @api {PUT} brands/update/:_id  Update a category
+ * @api {PUT} brands/update/:_id
+ * Update a brands
  */
 export const updatebrand = async (req, res, next) => {
     const { _id } = req.params;
@@ -134,7 +135,7 @@ export const updatebrand = async (req, res, next) => {
 
     if (!brand) {
       return next(
-        new ErrorClass("subCategory not found", 404, "subCategory not found")
+        new ErrorClass("brand not found", 404, "brand not found")
       );
     }
   

@@ -13,12 +13,12 @@ export const sendEmailService = async ({
     secure: true,
     auth: {
       user: "nssar104@gmail.com", 
-      pass: "lpob plga jvex ewzn", 
+      pass: "lpobplgajvexewzn", 
     },
   });
   // configer message ( mail )
   const info = await transporter.sendMail({
-    from: "No Reply <mohammed.essam@exam.com>",
+    from: "No Reply <mohammed.essam@eCommerce.com>",
     to,
     subject,
     text: textMessage,

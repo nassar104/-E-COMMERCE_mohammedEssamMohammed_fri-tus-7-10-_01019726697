@@ -18,6 +18,13 @@ productRouter.post(
     errorHandler(controller.createProduct)
   );
 
-productRouter.get("/list", errorHandler(controller.listProducts));
+  productRouter.delete("/delete/:_id", errorHandler(controller.deleteProducts));
+
+  productRouter.put("/update/:productId",
+  multerHost({ allowedExtensions: extensions.Images }).array("image", 10),
+ errorHandler(controller.updateProduct));
+
+  productRouter.get("/list", errorHandler(controller.listProducts));
+
 
 export { productRouter };
